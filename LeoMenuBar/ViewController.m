@@ -52,10 +52,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)didTappedButton:(UIButton *)button
-{
-    NSLog(@"didTappedButtonWithName:%@", button.titleLabel.text);
-}
+//- (void)didTappedButton:(UIButton *)button
+//{
+//    NSLog(@"didTappedButtonWithName:%@", button.titleLabel.text);
+//}
 
 - (void)didTappedButton:(UIButton *)button AtTappBarIndex:(NSInteger)index
 {

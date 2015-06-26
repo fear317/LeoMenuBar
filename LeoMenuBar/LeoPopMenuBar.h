@@ -8,15 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol  LeoMenuBarDelegate <NSObject>
+@protocol LeoPopMenuBarDelegate <NSObject>
 
-- (void)didTappedButton:(UIButton *)button;
 - (void)didTappedButton:(UIButton *)button AtTappBarIndex:(NSInteger)index;
+
 @end
+
+//@protocol  LeoMenuBarDelegate <NSObject>
+//
+////- (void)didTappedButton:(UIButton *)button;
+//- (void)didTappedButton:(UIButton *)button AtTappBarIndex:(NSInteger)index;
+//@end
 
 @interface LeoPopMenuBar : UIView
 @property (assign) NSInteger coloumn;
-@property (weak, nonatomic) id<LeoMenuBarDelegate> menuBarDelegate;
+//@property (weak, nonatomic) id<LeoMenuBarDelegate> menuBarDelegate;
+@property (weak, nonatomic) id<LeoPopMenuBarDelegate> popMenuBarDelegate;
 
 - (void)addButtonItemWithArr:(NSArray *)nameArr;
 - (void)updatePopMenuBarState:(BOOL)isShowed;

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4E0BC0F4-AFE5-4E61-B602-AC925BE4C32E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LeoMenuBar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>17DD7B0F988611C40E0E5E259DD6A7880304DBA9</key>
+		<string>https://github.com/fear317/LeoMenuBar.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LeoMenuBar.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>17DD7B0F988611C40E0E5E259DD6A7880304DBA9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/fear317/LeoMenuBar.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>17DD7B0F988611C40E0E5E259DD6A7880304DBA9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>17DD7B0F988611C40E0E5E259DD6A7880304DBA9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LeoMenuBar</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "LeoPopMenuBar.h"
 
-@interface LeoMenuBar : UIScrollView
+@protocol  LeoMenuBarDelegate <NSObject>
+
+- (void)didTappedButton:(UIButton *)button AtTappBarIndex:(NSInteger)index;
+@end
+
+@interface LeoMenuBar : UIScrollView <LeoPopMenuBarDelegate>
 
 @property (weak, nonatomic) id<LeoMenuBarDelegate> menuBarDelegate;
 
-//- (void)addButtonItemWithArr:(NSArray *)nameArr target:(id<LeoMenuBarDelegate>)delegate;
-//- (void)addButtonItemWithDic:(NSDictionary *)nameDic target:(id<LeoMenuBarDelegate>)delegate;
 - (void)addControlButtonArr:(NSArray *)controlArr  popButtonArr:(NSArray *)popArr target:(id<LeoMenuBarDelegate>)delegate;
 
 - (void)updateItemTitleColor:(UIColor *)color andMenuBarBackgroundColor:(UIColor *)bgColor;

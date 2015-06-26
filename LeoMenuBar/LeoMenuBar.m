@@ -68,7 +68,7 @@
                 popBar.coloumn = i;
                 [popBar addButtonItemWithArr:popNameArr];
                 [popBar setClipsToBounds:YES];
-                popBar.menuBarDelegate = delegate;
+                popBar.popMenuBarDelegate = self;
                 [popBarDic setObject:popBar forKey:controlName];                
             }
         }
@@ -86,9 +86,11 @@
 - (void)didTappedItem:(id)sender
 {
     UIButton *button = (UIButton *)sender;
+    
     if (self.menuBarDelegate) {
         [self.menuBarDelegate didTappedButton:button AtTappBarIndex:button.tag];
     }
+    
     if (!_focusView || _focusView.coloumn != button.tag) {
         NSString *name = button.titleLabel.text;
         LeoPopMenuBar *popBar = [_popMenuBarDic objectForKey:name];
@@ -96,7 +98,9 @@
             LeoPopMenuBar *lastPopBar = _focusView;
             _focusView = popBar;
             [self.superview addSubview:popBar];
+            
             [popBar updatePopMenuBarState:YES];
+            
             if (lastPopBar != _focusView) {
                 [lastPopBar updatePopMenuBarState:NO];
             }
@@ -108,12 +112,23 @@
             }            
         }
     }else if(_focusView && _focusView.coloumn == button.tag) {
-        LeoPopMenuBar *popBar = _focusView;
+//        LeoPopMenuBar *popBar = _focusView;
+//        _focusView = nil;
+//        if (popBar && self.superview) {
+//            [popBar updatePopMenuBarState:NO];
+//        }
+        [self removeFocusView:_focusView];
         _focusView = nil;
-        if (popBar && self.superview) {
-            [popBar updatePopMenuBarState:NO];
-        }
     }
+}
+
+- (void)removeFocusView:(UIView *)focusView
+{
+    LeoPopMenuBar *popBar = (LeoPopMenuBar *)focusView;
+    if (popBar && self.superview) {
+        [popBar updatePopMenuBarState:NO];
+    }
+
 }
 
 - (void)updateItemTitleColor:(UIColor *)color andMenuBarBackgroundColor:(UIColor *)bgColor
@@ -130,14 +145,16 @@
     }
 }
 
-//- (void)setMenuBarDelegate:(id<LeoMenuBarDelegate>)menuBarDelegate
-//{
-//    if (!_menuBarDelegate || _menuBarDelegate != menuBarDelegate) {
-//        _menuBarDelegate = menuBarDelegate;
-//        for (NSString *key in [_popMenuBarDic allKeys]) {
-//            LeoPopMenuBar *popMenuBar = [_popMenuBarDic objectForKey:key];
-//            [popMenuBar setMenuBarDelegate:menuBarDelegate];
-//        }
-//    }
-//}
+- (void)didTappedButton:(UIButton *)button AtTappBarIndex:(NSInteger)index
+{
+    if (self.menuBarDelegate) {
+        [self.menuBarDelegate didTappedButton:button AtTappBarIndex:index];
+    }
+    
+    if (_focusView) {
+        [self removeFocusView:_focusView];
+        _focusView = nil;
+    }
+}
+
 @end

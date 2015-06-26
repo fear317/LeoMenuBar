@@ -46,9 +46,9 @@
 - (void)didTappedItem:(id)sender
 {
     UIButton *button = (UIButton *)sender;
-    if(self.menuBarDelegate)
+    if(self.popMenuBarDelegate)
     {
-        [self.menuBarDelegate didTappedButton:button AtTappBarIndex:self.coloumn];
+        [self.popMenuBarDelegate didTappedButton:button AtTappBarIndex:self.coloumn];
     }
 }
 
@@ -72,5 +72,4 @@
         }
     }
 }
-
 @end

@@ -10,7 +10,7 @@
 #import "LeoMenuBar.h"
 
 @interface ViewController : UIViewController<LeoMenuBarDelegate>
-- (void)didTappedButton:(UIButton *)button;
+//- (void)didTappedButton:(UIButton *)button;
 - (void)didTappedButton:(UIButton *)button AtTappBarIndex:(NSInteger)index;
 
 @end
