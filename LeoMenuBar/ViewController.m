@@ -30,7 +30,6 @@
     [self.view addSubview:menuBar];
     menuBar.menuBarDelegate = self;
     
-//    NSLog(@"%s",_cmd);
     [menuBar updateItemTitleColor:[UIColor redColor] andMenuBarBackgroundColor:[UIColor blackColor]];
     
     LeoMenuBar *menuBarWithPopBar = [[LeoMenuBar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, 30)];
