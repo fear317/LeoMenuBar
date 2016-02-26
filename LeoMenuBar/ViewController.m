@@ -30,7 +30,6 @@
     [self.view addSubview:menuBar];
     menuBar.menuBarDelegate = self;
     
-//    NSLog(@"%s",_cmd);
     [menuBar updateItemTitleColor:[UIColor redColor] andMenuBarBackgroundColor:[UIColor blackColor]];
     
     LeoMenuBar *menuBarWithPopBar = [[LeoMenuBar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, 30)];
@@ -50,11 +49,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//- (void)didTappedButton:(UIButton *)button
-//{
-//    NSLog(@"didTappedButtonWithName:%@", button.titleLabel.text);
-//}
 
 - (void)didTappedButton:(UIButton *)button AtTappBarIndex:(NSInteger)index
 {
