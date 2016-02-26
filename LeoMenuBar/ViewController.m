@@ -20,7 +20,6 @@
     
     LeoMenuBar *menuBar = [[LeoMenuBar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 30, self.view.frame.size.width, 30)];
     [menuBar setBackgroundColor:[UIColor yellowColor]];
-//    NSDictionary *dic = [[NSDictionary alloc] initWithObjectsAndKeys:[[NSArray alloc] initWithObjects:@"pop1", nil], @"button1",[[NSArray alloc] initWithObjects:@"pop2",nil], @"button2",[[NSArray alloc] initWithObjects:@"pop3",nil], @"button3",[[NSArray alloc] initWithObjects:@"pop4",nil], @"button4",[[NSArray alloc] initWithObjects:@"pop5",nil], @"button5", nil];
     NSArray *controlNameArr = [[NSArray alloc] initWithObjects:@"button1",@"button2",@"button3",@"button4",@"button5", nil];
     NSArray *popNameArr = [[NSArray alloc] initWithObjects:[[NSArray alloc] initWithObjects:@"pop1", @"pop2", @"pop3", @"pop4", nil],
     [[NSArray alloc] initWithObjects:@"pop11", @"pop2", @"pop3", @"pop4", nil],
