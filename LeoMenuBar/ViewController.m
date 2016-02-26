@@ -24,9 +24,9 @@
     NSArray *popNameArr = [[NSArray alloc] initWithObjects:[[NSArray alloc] initWithObjects:@"pop1", @"pop2", @"pop3", @"pop4", nil],
     [[NSArray alloc] initWithObjects:@"pop11", @"pop2", @"pop3", @"pop4", nil],
     [[NSArray alloc] initWithObjects: nil],
-    [[NSArray alloc] initWithObjects:@"pop1111", @"pop2", @"pop3", @"pop4", nil],
+//    [[NSArray alloc] initWithObjects:@"pop1111", @"pop2", @"pop3", @"pop4", nil],
     [[NSArray alloc] initWithObjects:nil], nil];
-    [menuBar addControlButtonArr:controlNameArr popButtonArr:popNameArr target:self];
+//    [menuBar addControlButtonArr:controlNameArr popButtonArr:popNameArr target:self];
     [self.view addSubview:menuBar];
     menuBar.menuBarDelegate = self;
     
